@@ -47,6 +47,52 @@ class _QuoteListState extends State<QuoteList> {
       quote: "Imagination is more important than knowledge.",
       author: "Albert Einstein",
     ),
+    Quotes(
+      id: 7,
+      quote: "The only thing we have to fear is fear itself.",
+      author: "Franklin D. Roosevelt",
+    ),
+    Quotes(
+      id: 8,
+      quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+      author: "Ralph Waldo Emerson",
+    ),
+    Quotes(
+      id: 9,
+      quote: "In three words I can sum up everything I've learned about life: it goes on.",
+      author: "Robert Frost",
+    ),
+    Quotes(
+      id: 10,
+      quote: "Don't watch the clock; do what it does. Keep going.",
+      author: "Sam Levenson",
+    ),
+    Quotes(
+      id: 11,
+      quote: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+      author: "Albert Schweitzer",
+    ),
+    Quotes(
+      id: 12,
+      quote: "The only way to achieve the impossible is to believe it is possible.",
+      author: "Charles Kingsleigh (from Alice in Wonderland)",
+    ),
+    Quotes(
+      id: 13,
+      quote: "Your time is limited, don't waste it living someone else's life.",
+      author: "Steve Jobs",
+    ),
+    Quotes(
+      id: 14,
+      quote: "Life is 10% what happens to us and 90% how we react to it.",
+      author: "Charles R. Swindoll",
+    ),
+    Quotes(
+      id: 15,
+      quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+      author: "Nelson Mandela",
+    ),
+
   ];
 
   Widget quoteCard(quote) {
@@ -62,6 +108,8 @@ class _QuoteListState extends State<QuoteList> {
               style: TextStyle(
                 fontSize: 20, 
                 color: Colors.blueGrey[800],
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.bold
               ),
             ),
             const SizedBox(
@@ -72,6 +120,8 @@ class _QuoteListState extends State<QuoteList> {
               style: TextStyle(
                 fontSize: 15, 
                 color: Colors.blueGrey[600],
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.w700
               ),
             ),
           ],
@@ -87,6 +137,12 @@ class _QuoteListState extends State<QuoteList> {
       appBar: AppBar(
         title: const Text('Quotes of Greatness'),
         centerTitle: true,
+        titleTextStyle: const TextStyle(
+          fontFamily: 'Quicksand',
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic,
+          fontSize: 20
+        ),
         backgroundColor: Colors.blueGrey[800],
       ),
       /* body: Padding(
@@ -104,7 +160,7 @@ class _QuoteListState extends State<QuoteList> {
       ), */
       body: SingleChildScrollView(
         child: Column(
-          children: quotes.map((quote) => quoteCard(quote)).toList()
+          children: quotes.map((quote) => quoteCard(quote)).toList(),
         ),
       ),
     );
