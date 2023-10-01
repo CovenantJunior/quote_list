@@ -97,9 +97,10 @@ class _QuoteListState extends State<QuoteList> {
 
   Widget quoteCard(quote) {
     return Card(
+      elevation: 10,
       margin: const EdgeInsetsDirectional.all(20),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.fromLTRB(20.0,30.0, 10.0, 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -133,7 +134,7 @@ class _QuoteListState extends State<QuoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blueGrey[50],
       appBar: AppBar(
         title: const Text('Quotes of Greatness'),
         centerTitle: true,
