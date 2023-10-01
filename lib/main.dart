@@ -13,40 +13,37 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-  List<Map<String, dynamic>> quotes = [
-    {
-      "id": 1,
-      "author": "Winston Churchill",
-      "quote":
-          "Success is not final, failure is not fatal: It is the courage to continue that counts."
-    },
-    {
-      "id": 2,
-      "author": "Steve Jobs",
-      "quote": "The only way to do great work is to love what you do."
-    },
-    {
-      "id": 3,
-      "author": "Martin Luther King Jr.",
-      "quote":
-          "In the end, we will remember not the words of our enemies, but the silence of our friends."
-    },
-    {
-      "id": 4,
-      "author": "Confucius",
-      "quote": "Life is really simple, but we insist on making it complicated."
-    },
-    {
-      "id": 5,
-      "author": "Eleanor Roosevelt",
-      "quote":
-          "The future belongs to those who believe in the beauty of their dreams."
-    },
-    {
-      "id": 6,
-      "author": "Albert Einstein",
-      "quote": "Imagination is more important than knowledge."
-    }
+  List<Quotes> quotes = [
+    Quotes(
+      id: 1,
+      quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      author: "Winston Churchill",
+    ),
+    Quotes(
+      id: 2,
+      quote: "The only way to do great work is to love what you do.",
+      author: "Steve Jobs",
+    ),
+    Quotes(
+      id: 3,
+      quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+      author: "Martin Luther King Jr.",
+    ),
+    Quotes(
+      id: 4,
+      quote: "Life is really simple, but we insist on making it complicated.",
+      author: "Confucius",
+    ),
+    Quotes(
+      id: 5,
+      quote: "The future belongs to those who believe in the beauty of their dreams.",
+      author: "Eleanor Roosevelt",
+    ),
+    Quotes(
+      id: 6,
+      quote: "Imagination is more important than knowledge.",
+      author: "Albert Einstein",
+    ),
   ];
 
   @override
@@ -60,7 +57,7 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         children: quotes.map((quote) {
-          return Text(quote['author']);
+          return Text('${quote.quote}\nby\n${quote.author}\n');
         }).toList(),
       ),
     );
