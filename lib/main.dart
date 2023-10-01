@@ -16,7 +16,8 @@ class _QuoteListState extends State<QuoteList> {
   List<Quotes> quotes = [
     Quotes(
       id: 1,
-      quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      quote:
+          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
       author: "Winston Churchill",
     ),
     Quotes(
@@ -26,7 +27,8 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 3,
-      quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+      quote:
+          "In the end, we will remember not the words of our enemies, but the silence of our friends.",
       author: "Martin Luther King Jr.",
     ),
     Quotes(
@@ -36,7 +38,8 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 5,
-      quote: "The future belongs to those who believe in the beauty of their dreams.",
+      quote:
+          "The future belongs to those who believe in the beauty of their dreams.",
       author: "Eleanor Roosevelt",
     ),
     Quotes(
@@ -46,19 +49,60 @@ class _QuoteListState extends State<QuoteList> {
     ),
   ];
 
+  Widget quoteCard(quote) {
+    return Card(
+      margin: const EdgeInsetsDirectional.all(20),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Text(
+              quote.quote,
+              style: TextStyle(
+                fontSize: 20, 
+                color: Colors.blueGrey[800],
+              ),
+            ),
+            const SizedBox(
+              height: 7,
+            ),
+            Text(
+              quote.author,
+              style: TextStyle(
+                fontSize: 15, 
+                color: Colors.blueGrey[600],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Quotes of Greatness'),
         centerTitle: true,
         backgroundColor: Colors.blueGrey[800],
       ),
+      /* body: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: Column(
+          children: quotes.map((quote) {
+            return Text(
+              '${quote.quote}\n- ${quote.author}\n\n\n',
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+            );
+          }).toList(),
+        ),
+      ), */
       body: Column(
-        children: quotes.map((quote) {
-          return Text('${quote.quote}\nby\n${quote.author}\n');
-        }).toList(),
+        children: quotes.map((quote) => quoteCard(quote)).toList()
       ),
     );
   }
