@@ -55,6 +55,7 @@ class _QuoteListState extends State<QuoteList> {
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
               quote.quote,
@@ -64,7 +65,7 @@ class _QuoteListState extends State<QuoteList> {
               ),
             ),
             const SizedBox(
-              height: 7,
+              height: 20,
             ),
             Text(
               quote.author,
