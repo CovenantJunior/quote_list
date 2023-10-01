@@ -102,8 +102,10 @@ class _QuoteListState extends State<QuoteList> {
           }).toList(),
         ),
       ), */
-      body: Column(
-        children: quotes.map((quote) => quoteCard(quote)).toList()
+      body: SingleChildScrollView(
+        child: Column(
+          children: quotes.map((quote) => quoteCard(quote)).toList()
+        ),
       ),
     );
   }
