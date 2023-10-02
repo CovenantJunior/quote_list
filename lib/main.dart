@@ -16,8 +16,7 @@ class _QuoteListState extends State<QuoteList> {
   List<Quotes> quotes = [
     Quotes(
       id: 1,
-      quote:
-          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
       author: "Winston Churchill",
     ),
     Quotes(
@@ -27,8 +26,7 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 3,
-      quote:
-          "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+      quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
       author: "Martin Luther King Jr.",
     ),
     Quotes(
@@ -38,8 +36,7 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 5,
-      quote:
-          "The future belongs to those who believe in the beauty of their dreams.",
+      quote: "The future belongs to those who believe in the beauty of their dreams.",
       author: "Eleanor Roosevelt",
     ),
     Quotes(
