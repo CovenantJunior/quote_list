@@ -94,10 +94,13 @@ class _QuoteListState extends State<QuoteList> {
 
   Widget quoteCard(quote) {
     return Card(
-      elevation: 10,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      elevation: 8,
       margin: const EdgeInsetsDirectional.all(20),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0,30.0, 10.0, 10.0),
+        padding: const EdgeInsets.fromLTRB(20.0,30.0, 10.0, 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
