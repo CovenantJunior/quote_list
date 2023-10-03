@@ -44,15 +44,34 @@ class QuoteCard extends StatelessWidget {
             const Divider(
               height: 50.0,
             ),
-            FloatingActionButton(
-              onPressed: () {
-                // ignore: avoid_print
-                print('Delete ${quote.id}');
-              },
-              child: const Icon(
-                Icons.delete,
-                color: Colors.white,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  onPressed: () {
+                    // ignore: avoid_print
+                    print('Delete ${quote.id}');
+                  },
+                  child: const Icon(
+                    Icons.share,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                FloatingActionButton(
+                  onPressed: () {
+                    // ignore: avoid_print
+                    print('Delete ${quote.id}');
+                  },
+                  backgroundColor: Colors.red,
+                  child: const Icon(
+                    Icons.delete,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             )
           ],
         ),
