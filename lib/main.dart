@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quote_list/quotes.dart';
-// import 'package:quote_list/quote_card.dart';
+import 'package:quote_list/quote_card.dart';
 
 void main() {
   runApp(const MaterialApp(home: QuoteList()));
@@ -140,7 +140,7 @@ class _QuoteListState extends State<QuoteList> {
   }
 }
 
-class QuoteCard extends StatelessWidget {
+/* class QuoteCard extends StatelessWidget {
   const QuoteCard({
     super.key, required this.quote,
   });
@@ -185,3 +185,4 @@ class QuoteCard extends StatelessWidget {
     );
   }
 }
+ */
