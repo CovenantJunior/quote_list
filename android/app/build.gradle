@@ -26,6 +26,8 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
+    namespace 'com.example.quote_list'
+    
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -60,7 +62,6 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-    namespace 'com.example.quote_list'
 }
 
 flutter {

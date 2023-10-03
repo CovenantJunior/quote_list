@@ -25,7 +25,7 @@ class QuoteCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20.0, 30.0, 10.0, 20.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
               quote.quote,
