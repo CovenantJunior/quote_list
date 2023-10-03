@@ -3,11 +3,12 @@ import 'package:quote_list/quotes.dart';
 
 class QuoteCard extends StatelessWidget {
   const QuoteCard({
-    super.key, required this.quote,
+    super.key,
+    required this.quote,
   });
 
   final Quotes quote;
-  
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -40,6 +41,19 @@ class QuoteCard extends StatelessWidget {
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700),
             ),
+            const Divider(
+              height: 50.0,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                // ignore: avoid_print
+                print('Delete ${quote.id}');
+              },
+              child: const Icon(
+                Icons.delete,
+                color: Colors.white,
+              ),
+            )
           ],
         ),
       ),

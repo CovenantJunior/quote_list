@@ -116,7 +116,7 @@ class _QuoteListState extends State<QuoteList> {
             fontWeight: FontWeight.bold,
             fontStyle: FontStyle.italic,
             fontSize: 20),
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.blue,
       ),
       /* body: Padding(
         padding: const EdgeInsets.all(25.0),
