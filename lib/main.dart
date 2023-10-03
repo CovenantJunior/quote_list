@@ -92,7 +92,7 @@ class _QuoteListState extends State<QuoteList> {
 
   ];
 
-  Widget quoteCard(quote) {
+  Widget quoteTemplate(quote) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
@@ -161,7 +161,7 @@ class _QuoteListState extends State<QuoteList> {
       ), */
       body: SingleChildScrollView(
         child: Column(
-          children: quotes.map((quote) => quoteCard(quote)).toList(),
+          children: quotes.map((quote) => quoteTemplate(quote)).toList(),
         ),
       ),
     );
