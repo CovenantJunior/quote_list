@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:quote_list/quotes.dart';
 
 class QuoteCard extends StatelessWidget {
+  final Quotes quote;
+  final VoidCallback  delete;
+
   const QuoteCard({
     super.key,
     required this.quote,
+    required this.delete
   });
 
-  final Quotes quote;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +53,7 @@ class QuoteCard extends StatelessWidget {
                 FloatingActionButton(
                   onPressed: () {
                     // ignore: avoid_print
-                    print('Delete ${quote.id}');
+                    print('Share Quote ${quote.id}');
                   },
                   child: const Icon(
                     Icons.share,
@@ -61,10 +64,7 @@ class QuoteCard extends StatelessWidget {
                   width: 20,
                 ),
                 FloatingActionButton(
-                  onPressed: () {
-                    // ignore: avoid_print
-                    print('Delete ${quote.id}');
-                  },
+                  onPressed: delete,
                   backgroundColor: Colors.red,
                   child: const Icon(
                     Icons.delete,
