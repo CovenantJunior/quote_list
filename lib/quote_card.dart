@@ -3,12 +3,14 @@ import 'package:quote_list/quotes.dart';
 
 class QuoteCard extends StatelessWidget {
   final Quotes quote;
-  final VoidCallback  delete;
+  final VoidCallback share;
+  final VoidCallback delete;
 
   const QuoteCard({
     super.key,
     required this.quote,
-    required this.delete
+    required this.share,
+    required this.delete,
   });
 
 
@@ -51,10 +53,7 @@ class QuoteCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
-                  onPressed: () {
-                    // ignore: avoid_print
-                    print('Share Quote ${quote.id}');
-                  },
+                  onPressed: share,
                   child: const Icon(
                     Icons.share,
                     color: Colors.white,
