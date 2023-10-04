@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quote_list/quotes.dart';
 import 'package:quote_list/quote_card.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 void main() {
   runApp(const MaterialApp(home: QuoteList()));
@@ -18,8 +18,7 @@ class _QuoteListState extends State<QuoteList> {
   List<Quotes> quotes = [
     Quotes(
       id: 1,
-      quote:
-          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
       author: "Winston Churchill",
     ),
     Quotes(
@@ -29,8 +28,7 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 3,
-      quote:
-          "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+      quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
       author: "Martin Luther King Jr.",
     ),
     Quotes(
@@ -40,8 +38,7 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 5,
-      quote:
-          "The future belongs to those who believe in the beauty of their dreams.",
+      quote: "The future belongs to those who believe in the beauty of their dreams.",
       author: "Eleanor Roosevelt",
     ),
     Quotes(
@@ -56,14 +53,12 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 8,
-      quote:
-          "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+      quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
       author: "Ralph Waldo Emerson",
     ),
     Quotes(
       id: 9,
-      quote:
-          "In three words I can sum up everything I've learned about life: it goes on.",
+      quote: "In three words I can sum up everything I've learned about life: it goes on.",
       author: "Robert Frost",
     ),
     Quotes(
@@ -73,14 +68,12 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 11,
-      quote:
-          "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+      quote: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
       author: "Albert Schweitzer",
     ),
     Quotes(
       id: 12,
-      quote:
-          "The only way to achieve the impossible is to believe it is possible.",
+      quote: "The only way to achieve the impossible is to believe it is possible.",
       author: "Charles Kingsleigh (from Alice in Wonderland)",
     ),
     Quotes(
@@ -95,8 +88,7 @@ class _QuoteListState extends State<QuoteList> {
     ),
     Quotes(
       id: 15,
-      quote:
-          "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+      quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
       author: "Nelson Mandela",
     ),
   ];
