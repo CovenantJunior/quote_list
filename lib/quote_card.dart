@@ -4,13 +4,15 @@ import 'package:quote_list/quotes.dart';
 class QuoteCard extends StatelessWidget {
   final Quotes quote;
   final VoidCallback share;
-  final VoidCallback delete;
+  // final VoidCallback delete;
+  final VoidCallback clipboard;
 
   const QuoteCard({
     super.key,
     required this.quote,
     required this.share,
-    required this.delete,
+    // required this.delete,
+    required this.clipboard
   });
 
 
@@ -63,13 +65,21 @@ class QuoteCard extends StatelessWidget {
                   width: 20,
                 ),
                 FloatingActionButton(
+                  onPressed: clipboard,
+                  backgroundColor: Colors.white,
+                  child: Icon(
+                    Icons.paste,
+                    color: Colors.grey[800],
+                  ),
+                ),
+                /* FloatingActionButton(
                   onPressed: delete,
                   backgroundColor: Colors.red,
                   child: const Icon(
                     Icons.delete,
                     color: Colors.white,
                   ),
-                ),
+                ), */
               ],
             )
           ],
