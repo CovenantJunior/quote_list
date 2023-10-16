@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:quote_list/quotes.dart';
 import 'package:quote_list/quote_card.dart';
 import 'package:share_plus/share_plus.dart';
@@ -15,6 +16,9 @@ class QuoteList extends StatefulWidget {
   State<QuoteList> createState() => _QuoteListState();
 }
 
+Future<void> _refresh() async {
+        
+}
 class _QuoteListState extends State<QuoteList> {
   List<Quotes> quotes = [
     Quotes(
@@ -137,29 +141,29 @@ class _QuoteListState extends State<QuoteList> {
           }).toList(),
         ),
       ), */
-      body: SingleChildScrollView(
-        child: Column(
-          children: quotes
-              .map((quote) => QuoteCard(
-                  quote: quote,
-                  share: () {
-                    Share.share('${quote.quote} - ${quote.author}');
-                  },
-                  clipboard : () {
-                    Clipboard.setData(
-                      ClipboardData(
-                        text: '${quote.quote} - ${quote.author}'
-                      )
-                    );
-                  }
-                  /* delete: () {
-                    setState(() {
-                      quotes.remove(quote);
-                    });
-                  } */
-                )
-              )
-              .toList(),
+
+      body: LiquidPullToRefresh(
+        onRefresh: _refresh,
+        child: SingleChildScrollView(
+          child: Column(
+            children: quotes
+                .map((quote) => QuoteCard(
+                    quote: quote,
+                    share: () {
+                      Share.share('${quote.quote} - ${quote.author}');
+                    },
+                    clipboard: () {
+                      Clipboard.setData(ClipboardData(
+                          text: '${quote.quote} - ${quote.author}'));
+                    }
+                    /* delete: () {
+                      setState(() {
+                        quotes.remove(quote);
+                      });
+                    } */
+                    ))
+                .toList(),
+          ),
         ),
       ),
     );
